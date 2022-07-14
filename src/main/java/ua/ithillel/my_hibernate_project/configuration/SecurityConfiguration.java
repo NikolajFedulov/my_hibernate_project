@@ -14,9 +14,6 @@ public class SecurityConfiguration {
 
     @Bean
     public InMemoryUserDetailsManager users() {
-//        String password = "hello";
-//        String hashedPassword = new BCryptPasswordEncoder().encode(password);
-//        System.out.println(hashedPassword);
         UserDetails admin = User.builder()
                 .username("admin")
                 .password("{bcrypt}" + ENCODED_PASSWORD)
